@@ -1,0 +1,16 @@
+<div>
+    <h3>List All Restaurants</h3>
+    <div>
+        <ul>
+            <% restaurants.forEach(restaurant =>{%>
+                <li><%= restaurant.name %>
+                <a href="/show/<%= restaurant._id%>">Show</a>
+                <a href="/edit/<%= restaurant._id%>">Edit</a></li>
+                <form method="post" action="/delete/<%= restaurant._id %>?_method=DELETE">
+                    <button type="submit">Delete</button>
+                </form>
+            <% }) %>
+        </ul>
+    </div>
+
+</div>

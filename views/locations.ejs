@@ -1,0 +1,10 @@
+<h3>View Restaurants by Districts</h3>
+
+<div>
+    <ul>
+        <% districts.forEach(district =>{%>
+            <li><a href="/location/<%= district._id%>"><%=district.district%></a></li>
+        <% }) %>
+    </ul>
+</div>
+

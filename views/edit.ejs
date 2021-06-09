@@ -1,0 +1,46 @@
+<h3>Edit Restaurant Details</h3>
+
+<h3>Name</h3>
+<p><%=restaurant.name%></p>
+
+<h3>Street Address</h3>
+<p><%=restaurant.address.street%></p>
+<p>Postal Code: <%=restaurant.address.postal%></p>
+
+<h3>Owner</h3>
+<p><%=restaurant.owner%></p>
+
+
+<form action="/add" method="post">
+
+    <h3>Current District</h3>
+    <li><%=restaurant.districts.district%></li>
+
+    <h3>District Options</h3>
+    <div>
+        <% districts.forEach(district =>{%>
+            <input name="districts" value="<%= district._id %>" type="checkbox"/><%= district.district %>
+        <% }) %>
+    </div>
+
+    <h3>Current Cuisines</h3>
+    <% restaurant.cuisines.forEach(cuisine=>{%>
+    <li><%=cuisine.cuisine%></li>
+    <%})%>%>
+
+    <h3>Cuisine Options</h3>
+    <div>
+        <% cuisines.forEach(cuisine =>{%>
+            <input name="cuisines" value="<%= cuisine._id %>" type="checkbox"/><%= cuisine.cuisine %>
+        <% }) %>
+    </div>
+
+    <br>
+
+    <button type="submit">Submit Changes</button>
+
+</form>
+
+
+
+

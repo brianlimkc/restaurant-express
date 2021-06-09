@@ -1,0 +1,20 @@
+<h3>Restaurant Detail View</h3>
+
+<h3>Name</h3>
+<p><%=restaurant.name%></p>
+
+<h3>Street Address</h3>
+<p><%=restaurant.address.street%></p>
+<p>Postal Code: <%=restaurant.address.postal%></p>
+
+<h3>Owner</h3>
+<p><%=restaurant.owner%></p>
+
+<h3>District</h3>
+<li><%=restaurant.districts.district%></li>
+
+<h3>Cuisines</h3>
+    <% restaurant.cuisines.forEach(cuisine=>{%>
+        <li><%=cuisine.cuisine%></li>
+    <%})%>%>
+

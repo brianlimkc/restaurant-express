@@ -1,0 +1,13 @@
+<h3>All Restaurants in <%=district.district%></h3>
+
+<%filteredRestaurants.forEach(restaurant=>{%>
+
+<h3>Name</h3>
+<p><%=restaurant.name%></p>
+
+<h3>Street Address</h3>
+<p><%=restaurant.address.street%></p>
+<p>Postal Code: <%=restaurant.address.postal%></p>
+<br>
+
+<%})%>
